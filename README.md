@@ -53,4 +53,6 @@ mcapi.head() Output:
 }
 */
 
+[Support Server](https://www.zirobot.xyz/support)
+
 ```
