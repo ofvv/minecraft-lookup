@@ -1,5 +1,5 @@
 # Minecraft-Lookup
-
+[![NPM](https://nodei.co/npm/minecraft-lookup.png?mini=true)](https://nodei.co/npm/minecraft-lookup/)
 ### Example:
 
 ```js
