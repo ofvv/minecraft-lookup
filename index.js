@@ -8,6 +8,8 @@ const skinurl = `https://minotar.net`;
 const heads = `https://cravatar.eu`;
 const servers = `https://api.mcsrvstat.us/2`;
 const serverimg = `https://eu.mc-api.net/v3/server/favicon`;
+const uuid = `https://playerdb.co/api/player/minecraft`;
+const namemc = `https://api.namemc.com`
 const fetch = require("node-fetch");
 
 module.exports = {
@@ -94,6 +96,17 @@ module.exports = {
             "hostname": data.hostname,
         }
         return filtered;
+    },
+  
+  namemcfriends: async function (namemcuuid) {
+      if (!namemcuuid) throw new TypeError(`No UUID Provided!`);
+      const namemcdata = await fetch(
+      `${namemc}/profile/${namemcuuid}/friends`
+    ).then((res) => res.json()).catch(e => {
+      throw new Error(e)
+    });
+    return namemcdata;
+
     }
 
 }
