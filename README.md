@@ -10,7 +10,7 @@ mcapi.user(username).then((data) => console.log(data));
 mcapi.server(ip).then((data) => console.log(data));
 mcapi.head(username).then((data) => console.log(data));
 mcapi.status().then((data) => console.log(data));
-mcapi.namemcfriends("adf01e23-43c8-44e7-b039-a0981da5a093").then(data => console.log(data))
+mcapi.namemcfriends(uuid).then(data => console.log(data))
 // You Can Also Do const data = await mcapi.skin(username) etc...
 
 //mcapi.status() Output:
@@ -66,6 +66,18 @@ mcapi.head() Output:
     '1.13': '/give @p minecraft:player_head{SkullOwner:"ZiroCore"}',
     '1.12': '/give @p minecraft:skull 1 3 {SkullOwner:"ZiroCore"}'
   }
+}
+*/
+
+
+/*
+mcapi.namemcfriends() Output: 
+[
+{
+    "uuid": "26bdff37-fec8-48f1-980f-66bf69ee751c",
+    "name": "BadBoyHalo"
+}
+]
 }
 */
 ```
