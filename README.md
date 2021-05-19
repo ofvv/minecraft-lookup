@@ -1,14 +1,29 @@
 # Minecraft-Lookup
 
 ### Example:
+
 ```js
 const mcapi = require("minecraft-lookup");
 
-mcapi.skin(username).then(data => console.log(data));
-mcapi.user(username).then(data => console.log(data));
-mcapi.server(ip).then(data => console.log(data));
-mcapi.head(username).then(data => console.log(data));
+mcapi.skin(username).then((data) => console.log(data));
+mcapi.user(username).then((data) => console.log(data));
+mcapi.server(ip).then((data) => console.log(data));
+mcapi.head(username).then((data) => console.log(data));
+mcapi.status().then((data) => console.log(data));
 // You Can Also Do const data = await mcapi.skin(username) etc...
+
+//mcapi.status() Output:
+/*
+[
+  {"minecraft.net":"green"},
+  {"session.minecraft.net":"green"},
+  {"account.mojang.com":"green"},
+  {"authserver.mojang.com":"green"},
+  {"sessionserver.mojang.com":"red"},
+  {"api.mojang.com":"green"},
+  {"textures.minecraft.net":"green"},
+  {"mojang.com":"green"}]
+*/
 
 // mcapi.skin() Output: { view: 'link' download: 'link' }
 
@@ -52,6 +67,6 @@ mcapi.head() Output:
   }
 }
 */
-
 ```
+
 [Support Server](https://www.zirobot.xyz/support)
