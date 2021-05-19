@@ -13,6 +13,14 @@
     "type": "git",
     "url": "github.com/ZiroCore/minecraft-lookup"
   },
+  "bugs": {
+    "url": "https://github.com/ZiroCore/minecraft-lookup/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngeloCore/discord-buttons.git"
+  },
+  "homepage": "https://github.com/ZiroCore/minecraft-lookup",
   "keywords": [
     "minecraft",
     "namemc",
