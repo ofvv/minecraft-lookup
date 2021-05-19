@@ -1,6 +1,6 @@
 {
   "name": "minecraft-lookup",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Lookup Minecraft Users, Avatars and Servers!",
   "main": "index.js",
   "directories": {
@@ -11,14 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/ZiroCore/minecraft-lookup"
+    "url": "git+https://github.com/AngeloCore/discord-buttons.git"
   },
   "bugs": {
     "url": "https://github.com/ZiroCore/minecraft-lookup/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AngeloCore/discord-buttons.git"
   },
   "homepage": "https://github.com/ZiroCore/minecraft-lookup",
   "keywords": [
