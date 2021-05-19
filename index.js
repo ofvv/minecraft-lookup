@@ -3,24 +3,32 @@ module.exports = {
   api: require('./library/Minecraft')
 }
 */
-const url = `https://api.mojang.com`;
-const skinurl = `https://minotar.net`;
-const heads = `https://cravatar.eu`;
-const servers = `https://api.mcsrvstat.us/2`;
-const serverimg = `https://eu.mc-api.net/v3/server/favicon`;
-const uuid = `https://playerdb.co/api/player/minecraft`;
-const namemc = `https://api.namemc.com`;
-const statusurl = `https://status.mojang.com`;
+const 
+{
+  statusurl,
+  url,
+  skinurl,
+  heads,
+  servers,
+  capeurl,
+  serverimg
+} = require('./urls.json');
+
 const fetch = require("node-fetch");
 
 module.exports = {
     status: async function() {
         const data = await fetch(
-            `${statusurl}/check`
+            statusurl
         ).then((res) => res.json()).catch(e => {
             throw new Error(e)
         });
         return data;
+    },
+    ofCape: async function(username) {
+      if (!username) throw new TypeError(`No Username Provided!`)
+
+        return `${capeurl}${username}.png`;
     },
     user: async function(username) {
         if (!username) throw new TypeError(`No Username Provided!`)
