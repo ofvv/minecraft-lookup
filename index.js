@@ -11,7 +11,8 @@ const
   heads,
   servers,
   capeurl,
-  serverimg
+  serverimg,
+  namemc
 } = require('./urls.json');
 
 const fetch = require("node-fetch");
