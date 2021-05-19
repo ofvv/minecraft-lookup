@@ -22,7 +22,7 @@ module.exports = {
         const data = await fetch(
             statusurl
         ).then((res) => res.json()).catch(e => {
-            throw new Error(e)
+            throw new TypeError(e)
         });
         return data;
     },
@@ -36,7 +36,7 @@ module.exports = {
         const data = await fetch(
             `${url}/users/profiles/minecraft/${username}`
         ).then((res) => res.json()).catch(e => {
-            throw new Error(e)
+            throw new TypeError(e)
         });
         return data;
     },
@@ -61,8 +61,8 @@ module.exports = {
             headsize: size,
             headowner: username,
             gethead: {
-                "1.13": `/give @p minecraft:player_head{SkullOwner:"${username}"}`,
-                "1.12": `/give @p minecraft:skull 1 3 {SkullOwner:"${username}"}`
+                "new": `/give @p minecraft:player_head{SkullOwner:"${username}"}`,
+                "old": `/give @p minecraft:skull 1 3 {SkullOwner:"${username}"}`
             }
         }
         return data;
@@ -74,7 +74,7 @@ module.exports = {
         const data = await fetch(
             `${servers}/${ip}`
         ).then((res) => res.json()).catch(e => {
-            throw new Error(e)
+            throw new TypeError(e)
         });
         let filtered = {
             "servericon": `${serverimg}/${ip.toLowerCase()}`,
@@ -113,7 +113,7 @@ module.exports = {
       const namemcdata = await fetch(
       `${namemc}/profile/${namemcuuid}/friends`
     ).then((res) => res.json()).catch(e => {
-      throw new Error(e)
+      throw new TypeError(e)
     });
     return namemcdata;
 
