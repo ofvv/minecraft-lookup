@@ -1,5 +1,6 @@
 # Minecraft-Lookup
 [![NPM](https://nodei.co/npm/minecraft-lookup.png?mini=true)](https://nodei.co/npm/minecraft-lookup/)
+[![DOWNLOADS](https://img.shields.io/npm/dt/minecraft-lookup?maxAge=3600)
 ### Example:
 
 ```js
