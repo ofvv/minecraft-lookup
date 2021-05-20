@@ -6,5 +6,6 @@
     "skinurl":"https://minotar.net",
     "url":"https://api.mojang.com",
     "statusurl":"https://status.mojang.com/check",
-    "namemc":"https://api.namemc.com"
+    "namemc":"https://api.namemc.com",
+    "sideviewurl": "https://crafatar.com"
 }
