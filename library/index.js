@@ -12,7 +12,8 @@ const {
   capeurl,
   serverimg,
   namemc,
-  sideviewurl
+  sideviewurl,
+  urlhistory
 } = require('./urls.json');
 
 const fetch = require("node-fetch");
@@ -113,6 +114,29 @@ module.exports = {
     ).then((res) => res.json()).catch(e => {});
     return namemcdata;
 
+    },
+  
+   nameHistory: async function(type, content) {
+        if (!type) throw new TypeError(`No Type Provided (Types: username/uuid)`)
+        if (!content) throw new TypeError(`No Content Provided!`);
+        if (type === 'uuid') {
+        const data = await fetch(
+        `${urlhistory}/${content}/names`
+        ).then((res) => res.json()).catch(e => {
+            throw new TypeError(e)
+        });
+        return data;
+      } else if (type === 'username') {
+        const body = await fetch(
+            `${url}/users/profiles/minecraft/${content}`
+        ).then((res) => res.json()).catch(e => {});
+        const data = await fetch(
+        `${urlhistory}/${body.id}/names`
+        ).then((res) => res.json()).catch(e => {
+            throw new TypeError(e)
+        });
+        return data;
+      } else throw new TypeError(`Not a Valid Type!`)
     }
 
 }
