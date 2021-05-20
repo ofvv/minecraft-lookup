@@ -3,8 +3,7 @@ module.exports = {
   api: require('./library/Minecraft')
 }
 */
-const 
-{
+const {
   statusurl,
   url,
   skinurl,
@@ -21,9 +20,7 @@ module.exports = {
     status: async function() {
         const data = await fetch(
             statusurl
-        ).then((res) => res.json()).catch(e => {
-            throw new TypeError(e)
-        });
+        ).then((res) => res.json()).catch(e => {});
         return data;
     },
     ofCape: async function(username) {
@@ -35,9 +32,7 @@ module.exports = {
         if (!username) throw new TypeError(`No Username Provided!`)
         const data = await fetch(
             `${url}/users/profiles/minecraft/${username}`
-        ).then((res) => res.json()).catch(e => {
-            throw new TypeError(e)
-        });
+        ).then((res) => res.json()).catch(e => {});
         return data;
     },
 
@@ -73,9 +68,7 @@ module.exports = {
 
         const data = await fetch(
             `${servers}/${ip}`
-        ).then((res) => res.json()).catch(e => {
-            throw new TypeError(e)
-        });
+        ).then((res) => res.json()).catch(e => {});
         let filtered = {
             "servericon": `${serverimg}/${ip.toLowerCase()}`,
             "ip": data.ip,
@@ -107,14 +100,12 @@ module.exports = {
         }
         return filtered;
     },
-  
+
   namemcfriends: async function (namemcuuid) {
       if (!namemcuuid) throw new TypeError(`No UUID Provided!`);
       const namemcdata = await fetch(
       `${namemc}/profile/${namemcuuid}/friends`
-    ).then((res) => res.json()).catch(e => {
-      throw new TypeError(e)
-    });
+    ).then((res) => res.json()).catch(e => {});
     return namemcdata;
 
     }
