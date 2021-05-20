@@ -1,4 +1,4 @@
-const url = `https://api.mojang.com`;
+/*const url = `https://api.mojang.com`;
 const skinurl = `https://minotar.net`;
 const heads = `https://cravatar.eu`;
 const servers = `https://api.mcsrvstat.us/2`;
@@ -44,6 +44,7 @@ const fetch = require("node-fetch");
                                                                                             
 */
 // NOT USED ANYMORE
+/*
 module.exports = {
 
  user: async function (username) {
@@ -123,4 +124,4 @@ module.exports = {
       return filtered;
     }
 
-}
+}*/
