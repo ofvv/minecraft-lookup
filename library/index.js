@@ -25,6 +25,7 @@ module.exports = {
             statusurl
         ).then((res) => res.json()).catch(e => {});
         return data;
+     } catch (e) {}
     },
     ofCape: async function(username) {
       if (!username) throw new TypeError(`No Username Provided!`)
