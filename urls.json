@@ -7,5 +7,6 @@
     "url":"https://api.mojang.com",
     "statusurl":"https://status.mojang.com/check",
     "namemc":"https://api.namemc.com",
-    "sideviewurl": "https://crafatar.com"
+    "sideviewurl": "https://crafatar.com",
+    "urlhistory": "https://api.mojang.com/user/profiles"
 }
