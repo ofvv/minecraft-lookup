@@ -11,7 +11,8 @@ const {
   servers,
   capeurl,
   serverimg,
-  namemc
+  namemc,
+  sideviewurl
 } = require('./urls.json');
 
 const fetch = require("node-fetch");
@@ -38,9 +39,13 @@ module.exports = {
 
     skin: async function(username) {
         if (!username) throw new TypeError(`No Username Provided!`)
+      const body = await fetch(
+            `${url}/users/profiles/minecraft/${username}`
+        ).then((res) => res.json()).catch(e => {});
         const data = {
             view: `${skinurl}/skin/${username}`,
-            download: `${skinurl}/download/${username}`
+            download: `${skinurl}/download/${username}`,
+            sideview: `${sideviewurl}/renders/body/${body.id}`
         }
         return data;
     },
