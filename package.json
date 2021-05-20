@@ -3,6 +3,10 @@
   "version": "1.1.20",
   "description": "Lookup Minecraft Players, Skins, Avatars and Servers!",
   "main": "index.js",
+  "funding": {
+    "type" : "individual",
+    "url" : "https://ko-fi.com/zirobot"
+  },
   "directories": {
     "test": "tests"
   },
