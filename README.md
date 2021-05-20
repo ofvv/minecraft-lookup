@@ -51,7 +51,7 @@ mcapi.ofCape("Notch").then(data => console.log(data));
     cachetime: 1621441926,
     apiversion: 2
   },
-  motd: { raw: [ [Array] ], clean: [ [Array] ], html: [ [Array] ] },
+  motd: { raw: [Array], clean: [Array], html: [Array] },
   players: { online: 128553, max: 200000 },
   version: 'Requires MC 1.8 / 1.16',
   online: true,
