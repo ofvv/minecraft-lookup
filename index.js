@@ -12,6 +12,7 @@ const {
   capeurl,
   serverimg,
   namemc,
+  urlhistory,
   sideviewurl
 } = require('./urls.json');
 
@@ -113,6 +114,14 @@ module.exports = {
     ).then((res) => res.json()).catch(e => {});
     return namemcdata;
 
+    },
+    nameHistory : async function(UUID) {
+        if (!UUID) throw new TypeError(`No UUID Provided!`);
+        const data = await fetch(
+        `${urlhistory}${UUID}/names`
+        ).then((res) => res.json()).catch(e => {
+            throw new TypeError(e)
+        });
+        return data;
     }
-
 }
