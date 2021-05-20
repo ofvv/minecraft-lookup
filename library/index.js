@@ -20,31 +20,31 @@ const fetch = require("node-fetch");
 
 module.exports = {
     status: async function() {
-       try {
+
         const data = await fetch(
             statusurl
         ).then((res) => res.json()).catch(e => {});
         return data;
-     } catch (e) {}
+
     },
     ofCape: async function(username) {
       if (!username) throw new TypeError(`No Username Provided!`)
 
         return `${capeurl}${username}.png`;
-     } catch (e) {}
+
     },
     user: async function(username) {
-       try {
+
         if (!username) throw new TypeError(`No Username Provided!`)
         const data = await fetch(
             `${url}/users/profiles/minecraft/${username}`
         ).then((res) => res.json()).catch(e => {});
         return data;
-     } catch (e) {}
+
     },
 
     skin: async function(username) {
-       try {
+
         if (!username) throw new TypeError(`No Username Provided!`)
       const body = await fetch(
             `${url}/users/profiles/minecraft/${username}`
@@ -55,12 +55,12 @@ module.exports = {
             sideview: `${sideviewurl}/renders/body/${body.id}`
         }
         return data;
-     } catch (e) {}
+
     },
 
 
     head: async function(username, size) {
-       try {
+
         if (!username) throw new TypeError(`No Username Provided!`)
         if (!size) size = 190;
 
@@ -75,11 +75,11 @@ module.exports = {
             }
         }
         return data;
-     } catch (e) {}
+
     },
 
     server: async function(ip) {
-       try {
+
         if (!ip) throw new TypeError(`No Server IP Was Provided!`)
 
         const data = await fetch(
@@ -115,22 +115,22 @@ module.exports = {
             "hostname": data.hostname,
         }
         return filtered;
-     } catch (e) {}
+
     },
 
   namemcfriends: async function (namemcuuid) {
-       try {
+
       if (!namemcuuid) throw new TypeError(`No UUID Provided!`);
       const namemcdata = await fetch(
       `${namemc}/profile/${namemcuuid}/friends`
     ).then((res) => res.json()).catch(e => {});
     return namemcdata;
-     } catch (e) {}
+
 
     },
-  
+
    nameHistory: async function(type, content) {
-       try {
+
         if (!type) throw new TypeError(`No Type Provided (Types: username/uuid)`)
         if (!content) throw new TypeError(`No Content Provided!`);
         if (type === 'uuid') {
@@ -151,7 +151,7 @@ module.exports = {
         });
         return data;
       } else throw new TypeError(`Not a Valid Type!`)
-     } catch (e) {}
+
     }
 
 }
