@@ -14,7 +14,7 @@ const {
   namemc,
   sideviewurl,
   urlhistory
-} = require(`${process.cwd()}/urls.json`);
+} = require(`./urls.json`);
 
 const fetch = require("node-fetch");
 
