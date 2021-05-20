@@ -91,9 +91,9 @@ module.exports = {
                 "apiversion": data.debug.apiversion
             },
             "motd": {
-                "raw": [data.motd.raw],
-                "clean": [data.motd.clean],
-                "html": [data.motd.html]
+                "raw": data.motd.raw,
+                "clean": data.motd.clean,
+                "html": data.motd.html
             },
             "players": {
                 "online": data.players.online,
