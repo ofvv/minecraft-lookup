@@ -1,6 +1,8 @@
 # Minecraft-Lookup
-[![NPM](https://nodei.co/npm/minecraft-lookup.png?mini=true)](https://nodei.co/npm/minecraft-lookup/)
-[![DOWNLOADS](https://img.shields.io/npm/dt/minecraft-lookup?maxAge=3600)](https://nodei.co/npm/minecraft-lookup/)
+<p align="center"><img src="https://nodei.co/npm/minecraft-lookup.png?downloads=true" alt="ZiroCore" href='https://nodei.co/npm/minecraft-lookup/'/></p>
+<p align="center"><img src="https://img.shields.io/npm/dt/minecraft-lookup?maxAge=3600" alt="ZiroCore" href='https://nodei.co/npm/minecraft-lookup/'/></p>
+
+# 
 ### Example:
 
 ```js
@@ -83,3 +85,4 @@ mcapi.nameHistory("type", "content") Output:
 ```
 
 [Support Server](https://www.zirobot.xyz/support)
+#
