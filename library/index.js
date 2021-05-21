@@ -22,7 +22,7 @@ module.exports = {
     status: async function() {
        try {
         const data = await fetch(
-            statusurl
+            `${statusurl}/check`
         ).then((res) => res.json()).catch(e => {});
         return data;
      } catch (e) {}
@@ -31,7 +31,7 @@ module.exports = {
       try {
       if (!username) throw new TypeError(`No Username Provided!`)
 
-        return `${capeurl}${username}.png`;
+        return `${capeurl}/${username}.png`;
      } catch (e) {}
     },
     user: async function(username) {
