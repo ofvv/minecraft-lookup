@@ -46,3 +46,4 @@ export function server(ip: any): Promise<{
     hostname: any;
 }>;
 export function namemcfriends(namemcuuid: any): Promise<any>;
+export function nameHistory(type: string, content: string): Promise<object>;
