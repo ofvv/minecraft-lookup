@@ -18,10 +18,10 @@ mcapi.status().then(data => console.log(data));
 mcapi.ofCape("Notch").then(data => console.log(data));
 // You Can Also Do const data = await mcapi.skin(username) etc...
 
-//mcapi.ofCape() Output: "http://s.optifine.net/capes/cessabit.png"
+mcapi.ofCape() Output: "http://s.optifine.net/capes/cessabit.png"
 
-//mcapi.status() Output:
-/*
+mcapi.status() Output:
+
 [
   {"minecraft.net":"green"},
   {"session.minecraft.net":"green"},
@@ -31,16 +31,16 @@ mcapi.ofCape("Notch").then(data => console.log(data));
   {"api.mojang.com":"green"},
   {"textures.minecraft.net":"green"},
   {"mojang.com":"green"}]
-*/
 
-// mcapi.skin() Output: { view: 'link' download: 'link' }
 
-// mcapi.user() Output: { name: 'ZiroCore' id: 'adf01e2343c844e7b039a0981da5a093' }
+ mcapi.skin() Output: { view: 'link' download: 'link' }
 
-/* mcapi.server() Output:
+ mcapi.user() Output: { name: 'ZiroCore' id: 'adf01e2343c844e7b039a0981da5a093' }
+
+ mcapi.server() Output:
 {
   servericon: 'link',
-  ip: '172.65.230.166',
+  ip: '2y2c.org',
   port: 25565,
   debug: {
     ping: true,
@@ -58,11 +58,9 @@ mcapi.ofCape("Notch").then(data => console.log(data));
   version: 'Requires MC 1.8 / 1.16',
   online: true,
   protocol: 47,
-  hostname: 'mc.hypixel.net'
+  hostname: '2y2c.org'
 }
-*/
 
-/*
 mcapi.head() Output: 
 {
   helmhead: 'https://cravatar.eu/helmhead/ZiroCore/250.png',
@@ -74,15 +72,15 @@ mcapi.head() Output:
     '1.12': '/give @p minecraft:skull 1 3 {SkullOwner:"ZiroCore"}'
   }
 }
-*/
-/*
+
+
 mcapi.nameHistory("type", "content") Output:
 [
   { name: 'DeltaNinja' },
   { name: 'Dream', changedToAt: 1423044676000 }
 ]
-*/
+
 ```
 
-[Support Server](https://www.zirobot.xyz/support)
+[Support Server](https://discord.gg/UN2YGSnQap)
 #
